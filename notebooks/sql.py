@@ -2,10 +2,10 @@ import pandas as pd
 import sqlite3
 
 # Load Excel file into a DataFrame
-df = pd.read_excel(r'C:\Users\pc\Documents\decodelab_project\outputs\Cleaned_Dataset.xlsx')
+df = pd.read_excel(r'C:\Users\pc\Documents\Github\decodelab_project\outputs\Cleaned_Dataset.xlsx')
 
 # Create local SQLite database file
-conn = sqlite3.connect(r'C:\Users\pc\Documents\decodelab_project\outputs\orders.db')
+conn = sqlite3.connect(r'C:\Users\pc\Documents\Github\decodelab_project\outputs\orders.db')
 
 # Load data into SQL table
 df.to_sql('orders', conn, if_exists='replace', index=False)
